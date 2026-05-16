@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🎨 DESIGN MINIMALE */
+:root {
+  --accent: #7c3aed;
+}
+
+/* 🌐 BASE */
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+/* ROOT */
+#root {
+  min-height: 100vh;
+}
+
+/* TYPO */
+h1, h2, h3 {
+  color: #f9fafb;
+  letter-spacing: -0.02em;
+}
+
+/* SMOOTH */
+html {
+  scroll-behavior: smooth;
+}
