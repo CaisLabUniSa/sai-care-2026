@@ -310,12 +310,45 @@ export default function App() {
               patient care pathways within the biomedical informatics landscape.
             </p>
 
-            <p>
-              Papers should follow the official IEEE Computer Society
-              Proceedings Manuscript Formatting Guidelines. Further submission
-              instructions will be provided according to the host conference
-              requirements.
-            </p>
+            <div className="rounded-2xl bg-black/30 border border-white/10 p-6 space-y-4">
+              <h3 className="text-2xl font-bold text-white">Paper Submission</h3>
+
+              <p>
+                Please submit a full-length paper of up to{" "}
+                <span className="font-semibold text-white">
+                  8 pages in IEEE 2-column format
+                </span>{" "}
+                through the online submission system. The paper submission is{" "}
+                <span className="font-semibold text-white">double blind</span>. Please do
+                not include any authors and/or affiliations in the paper.
+              </p>
+
+              <p>
+                Electronic submissions in PDF or PostScript format are required. Selected
+                participants will be asked to submit their revised papers in a format to be
+                specified at the time of acceptance.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                <a
+                  href="https://www.ieee.org/conferences/publishing/templates"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex justify-center px-5 py-3 rounded-xl border border-violet-400/40 text-violet-200 hover:bg-violet-500/10 transition font-semibold"
+                >
+                  IEEE Author Templates
+                </a>
+
+                <a
+                  href="https://wi-lab.com/cyberchair/2026/bibm26/index.php"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex justify-center px-5 py-3 rounded-xl bg-violet-600 hover:bg-violet-700 transition font-semibold shadow-lg shadow-violet-900/40"
+                >
+                  Submit via CyberChair
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
