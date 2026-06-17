@@ -93,9 +93,6 @@ const workshopIdentificationFormUrl =
 const conferenceRegistrationUrl =
   "https://www3.cs.stonybrook.edu/~bibm2026/";
 
-  const workshopLogoUrl = "/logo1.png";
-const bibmLogoUrl = "/IEEEBIBM-logo2026.jpg";
-
 export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-slate-950 to-slate-900 text-white">
@@ -137,16 +134,24 @@ export default function App() {
         </div>
       </nav>
 
-      <section className="relative overflow-hidden pt-36 pb-28 px-6 text-center">
+      <section className="relative overflow-hidden pt-32 pb-28 px-6 text-center">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(124,58,237,0.35),transparent_45%)]" />
+        <div className="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-violet-600/20 blur-3xl" />
 
-        <div className="relative max-w-5xl mx-auto">
-          <div className="inline-flex mb-6 px-4 py-2 rounded-full border border-violet-400/30 bg-violet-500/10 text-violet-200 text-sm">
-            The 2nd International Workshop on Symbiotic AI in Biomedical
-            Informatics
+        <div className="relative max-w-6xl mx-auto">
+          <div className="mx-auto mb-10 max-w-4xl rounded-[2rem] border border-cyan-400/40 bg-black/60 p-5 shadow-2xl shadow-cyan-950/60 backdrop-blur-sm">
+            <img
+              src="/logo1.png"
+              alt="SAI-CARE 2026 logo"
+              className="block w-full h-auto rounded-[1.5rem] border border-white/10"
+            />
           </div>
 
-          <h1 className="text-6xl md:text-7xl font-extrabold tracking-tight mb-6">
+          <div className="inline-flex mb-6 px-4 py-2 rounded-full border border-violet-400/30 bg-violet-500/10 text-violet-200 text-sm">
+            The 2nd International Workshop on Symbiotic AI in Biomedical Informatics
+          </div>
+
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
             SAI-CARE 2026
           </h1>
 
@@ -253,23 +258,40 @@ export default function App() {
 
       <section id="cfp" className="max-w-5xl mx-auto px-6 py-20">
         <div className="rounded-3xl bg-violet-600/10 border border-violet-400/30 p-8 md:p-12">
-          <div className="inline-flex mb-5 px-4 py-2 rounded-full border border-violet-400/30 bg-violet-500/10 text-violet-200 text-sm">
-            In conjunction with
+          <div className="grid md:grid-cols-[1.2fr_0.8fr] gap-8 items-center mb-10">
+            <div>
+              <div className="inline-flex mb-5 px-4 py-2 rounded-full border border-violet-400/30 bg-violet-500/10 text-violet-200 text-sm">
+                In conjunction with
+              </div>
+
+              <h2 className="text-4xl font-bold mb-3">Call for Papers</h2>
+
+              <p className="text-violet-200 text-lg">
+                IEEE International Conference on Bioinformatics and Biomedicine
+                (BIBM)
+              </p>
+            </div>
+
+            <a
+              href={conferenceRegistrationUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="block rounded-2xl bg-white p-5 shadow-2xl shadow-black/30 hover:scale-[1.02] transition"
+            >
+              <img
+                src="/IEEEBIBM-logo2026.jpg"
+                alt="IEEE BIBM 2026 logo"
+                className="block w-full h-auto"
+              />
+            </a>
           </div>
-
-          <h2 className="text-4xl font-bold mb-3">Call for Papers</h2>
-
-          <p className="text-violet-200 text-lg mb-8">
-            IEEE International Conference on Bioinformatics and Biomedicine
-            (BIBM)
-          </p>
 
           <div className="space-y-5 text-slate-300 text-lg leading-relaxed">
             <p>
               SAI-CARE 2026 invites original contributions on the integration of
-              Artificial Intelligence into healthcare and biomedical
-              informatics, with a particular focus on Symbiotic AI systems and
-              advanced SAI-based applications in healthcare.
+              Artificial Intelligence into healthcare and biomedical informatics,
+              with a particular focus on Symbiotic AI systems and advanced
+              SAI-based applications in healthcare.
             </p>
 
             <p>
