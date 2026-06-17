@@ -93,6 +93,9 @@ const workshopIdentificationFormUrl =
 const conferenceRegistrationUrl =
   "https://www3.cs.stonybrook.edu/~bibm2026/";
 
+  const workshopLogoUrl = "/logo1.png";
+const bibmLogoUrl = "/IEEEBIBM-logo2026.jpg";
+
 export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-slate-950 to-slate-900 text-white">
