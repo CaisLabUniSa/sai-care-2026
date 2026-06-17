@@ -260,13 +260,15 @@ export default function App() {
         <div className="rounded-3xl bg-violet-600/10 border border-violet-400/30 p-8 md:p-12">
           <div className="grid md:grid-cols-[1.2fr_0.8fr] gap-8 items-center mb-10">
             <div>
-              <div className="inline-flex mb-5 px-4 py-2 rounded-full border border-violet-400/30 bg-violet-500/10 text-violet-200 text-sm">
+              <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5">
+                Call for Papers
+              </h2>
+
+              <div className="inline-flex mb-4 px-4 py-2 rounded-full border border-violet-400/30 bg-violet-500/10 text-violet-200 text-sm">
                 In conjunction with
               </div>
 
-              <h2 className="text-4xl font-bold mb-3">Call for Papers</h2>
-
-              <p className="text-violet-200 text-lg">
+              <p className="text-violet-200 text-lg md:text-xl leading-relaxed">
                 IEEE International Conference on Bioinformatics and Biomedicine
                 (BIBM)
               </p>
