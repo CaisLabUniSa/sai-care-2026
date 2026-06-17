@@ -139,7 +139,7 @@ export default function App() {
         <div className="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-violet-600/20 blur-3xl" />
 
         <div className="relative max-w-6xl mx-auto">
-          <div className="mx-auto mb-10 max-w-4xl rounded-[2rem] border border-cyan-400/40 bg-black/60 p-5 shadow-2xl shadow-cyan-950/60 backdrop-blur-sm">
+          <div className="mx-auto mb-10 max-w-xl rounded-[2rem] border border-cyan-400/40 bg-black/50 p-4 shadow-2xl shadow-cyan-950/50 backdrop-blur-sm">
             <img
               src="/logo1.png"
               alt="SAI-CARE 2026 logo"
