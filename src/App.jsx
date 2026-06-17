@@ -293,27 +293,83 @@ export default function App() {
         </div>
       </section>
 
-      <section id="dates" className="max-w-6xl mx-auto px-6 py-20">
-        <div className="relative overflow-hidden rounded-3xl border border-violet-400/30 bg-gradient-to-br from-violet-600/20 via-slate-900 to-black p-8 md:p-12 shadow-2xl shadow-violet-950/40">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(168,85,247,0.28),transparent_35%)]" />
+      <section id="dates" className="max-w-6xl mx-auto px-6 py-24">
+        <div className="relative overflow-hidden rounded-[2rem] border border-violet-400/40 bg-gradient-to-br from-violet-700/25 via-slate-950 to-black p-8 md:p-12 shadow-2xl shadow-violet-950/60">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(168,85,247,0.35),transparent_35%)]" />
+          <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-violet-500/20 blur-3xl" />
+          <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-indigo-500/10 blur-3xl" />
 
           <div className="relative">
-            <div className="inline-flex mb-5 px-4 py-2 rounded-full border border-violet-400/30 bg-violet-500/10 text-violet-200 text-sm">
-              Key deadlines
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+              <div>
+                <div className="inline-flex mb-5 px-4 py-2 rounded-full border border-violet-400/40 bg-violet-500/15 text-violet-100 text-sm">
+                  Key deadlines
+                </div>
+
+                <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+                  Important Dates
+                </h2>
+
+                <p className="text-slate-300 mt-4 max-w-2xl text-lg leading-relaxed">
+                  Please pay special attention to the full paper submission
+                  deadline. All workshop deadlines are listed below.
+                </p>
+              </div>
+
+              <a
+                href="#cfp"
+                className="inline-flex justify-center px-6 py-3 rounded-xl border border-violet-400/40 text-violet-100 hover:bg-violet-500/10 transition font-semibold"
+              >
+                View Call for Papers
+              </a>
             </div>
 
-            <h2 className="text-4xl font-bold mb-10">Important Dates</h2>
-
-            <div className="grid md:grid-cols-4 gap-5">
-              {dates.map(([label, value]) => (
-                <div
-                  key={label}
-                  className="rounded-2xl bg-black/30 border border-white/10 p-6 text-center hover:border-violet-400/50 transition"
-                >
-                  <p className="text-slate-400 text-sm">{label}</p>
-                  <p className="text-2xl font-bold mt-3">{value}</p>
+            <div className="grid lg:grid-cols-4 gap-5">
+              <div className="lg:col-span-2 rounded-3xl bg-violet-600/20 border border-violet-300/40 p-8 shadow-xl shadow-violet-950/40">
+                <div className="inline-flex mb-5 px-3 py-1 rounded-full bg-violet-400/20 border border-violet-300/30 text-violet-100 text-sm">
+                  Main deadline
                 </div>
-              ))}
+
+                <p className="text-slate-300 text-lg">
+                  Submission Deadline
+                </p>
+
+                <p className="text-4xl md:text-5xl font-extrabold mt-3">
+                  Sep 20, 2026
+                </p>
+
+                <p className="text-slate-400 mt-5 leading-relaxed">
+                  Due date for full workshop paper submission.
+                </p>
+              </div>
+
+              <div className="rounded-3xl bg-black/35 border border-white/10 p-6 hover:border-violet-400/50 transition">
+                <p className="text-slate-400 text-sm">
+                  Notification of Acceptance
+                </p>
+                <p className="text-2xl font-bold mt-3">Oct 10, 2026</p>
+              </div>
+
+              <div className="rounded-3xl bg-black/35 border border-white/10 p-6 hover:border-violet-400/50 transition">
+                <p className="text-slate-400 text-sm">
+                  Camera-ready Deadline
+                </p>
+                <p className="text-2xl font-bold mt-3">Oct 25, 2026</p>
+              </div>
+
+              <div className="lg:col-span-4 rounded-3xl bg-white/5 border border-white/10 p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                  <p className="text-slate-400 text-sm">Workshop Dates</p>
+                  <p className="text-3xl font-bold mt-2">Dec 1–4, 2026</p>
+                </div>
+
+                <div className="text-slate-300 md:text-right">
+                  <p className="font-semibold">IEEE BIBM 2026</p>
+                  <p className="text-slate-400">
+                    Dallas, Texas · Hybrid format
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
