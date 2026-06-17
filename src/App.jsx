@@ -14,7 +14,7 @@ const topics = [
 ];
 
 const dates = [
-  ["Submission Deadline", "Sep 30, 2026"],
+  ["Submission Deadline", "Sep 20, 2026"],
   ["Notification of Acceptance", "Oct 10, 2026"],
   ["Camera-ready Deadline", "Oct 25, 2026"],
   ["Workshops", "Dec 1–4, 2026"],
@@ -50,6 +50,11 @@ const committee = [
     "Mengyuan.Wang@tees.ac.uk",
   ],
   [
+    "Haiying Wang",
+    "School of Computing, Ulster University, UK",
+    "hy.wang@ulster.ac.uk",
+  ],
+  [
     "Luigi Di Biasi",
     "Computer Science Department, University of Salerno, Italy",
     "ldibiasi@unisa.it",
@@ -82,7 +87,11 @@ const webChair = [
   "dorossi@unisa.it",
 ];
 
-const registrationFormUrl = "https://forms.gle/ejjhT2U3rdi9xMHU8";
+const workshopIdentificationFormUrl =
+  "https://forms.gle/ejjhT2U3rdi9xMHU8";
+
+const conferenceRegistrationUrl =
+  "https://www3.cs.stonybrook.edu/~bibm2026/";
 
 export default function App() {
   return (
@@ -98,11 +107,11 @@ export default function App() {
             <a href="#topics" className="hover:text-white">
               Topics
             </a>
-            <a href="#dates" className="hover:text-white">
-              Dates
-            </a>
             <a href="#cfp" className="hover:text-white">
               Call for Papers
+            </a>
+            <a href="#dates" className="hover:text-white">
+              Dates
             </a>
             <a href="#committee" className="hover:text-white">
               Committee
@@ -110,8 +119,16 @@ export default function App() {
             <a href="#previous" className="hover:text-white">
               Previous
             </a>
-            <a href="#register" className="hover:text-white">
-              Register
+            <a
+              href={conferenceRegistrationUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-white"
+            >
+              Registration
+            </a>
+            <a href="#identification-form" className="hover:text-white">
+              Workshop Form
             </a>
           </div>
         </div>
@@ -137,19 +154,19 @@ export default function App() {
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
-              href={registrationFormUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="px-8 py-4 rounded-xl bg-violet-600 hover:bg-violet-700 transition font-semibold shadow-lg shadow-violet-900/40"
-            >
-              Register Now
-            </a>
-
-            <a
               href="#cfp"
               className="px-8 py-4 rounded-xl border border-white/15 hover:bg-white/10 transition font-semibold"
             >
               Call for Papers
+            </a>
+
+            <a
+              href={conferenceRegistrationUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="px-8 py-4 rounded-xl bg-violet-600 hover:bg-violet-700 transition font-semibold shadow-lg shadow-violet-900/40"
+            >
+              Registration
             </a>
           </div>
         </div>
@@ -231,27 +248,18 @@ export default function App() {
         </div>
       </section>
 
-      <section id="dates" className="max-w-5xl mx-auto px-6 py-20">
-        <h2 className="text-4xl font-bold text-center mb-10">
-          Important Dates
-        </h2>
-
-        <div className="grid md:grid-cols-4 gap-5">
-          {dates.map(([label, value]) => (
-            <div
-              key={label}
-              className="rounded-2xl bg-white/5 border border-white/10 p-6 text-center"
-            >
-              <p className="text-slate-400 text-sm">{label}</p>
-              <p className="text-2xl font-bold mt-3">{value}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section id="cfp" className="max-w-5xl mx-auto px-6 py-20">
         <div className="rounded-3xl bg-violet-600/10 border border-violet-400/30 p-8 md:p-12">
-          <h2 className="text-4xl font-bold mb-6">Call for Papers</h2>
+          <div className="inline-flex mb-5 px-4 py-2 rounded-full border border-violet-400/30 bg-violet-500/10 text-violet-200 text-sm">
+            In conjunction with
+          </div>
+
+          <h2 className="text-4xl font-bold mb-3">Call for Papers</h2>
+
+          <p className="text-violet-200 text-lg mb-8">
+            IEEE International Conference on Bioinformatics and Biomedicine
+            (BIBM)
+          </p>
 
           <div className="space-y-5 text-slate-300 text-lg leading-relaxed">
             <p>
@@ -281,6 +289,32 @@ export default function App() {
               instructions will be provided according to the host conference
               requirements.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="dates" className="max-w-6xl mx-auto px-6 py-20">
+        <div className="relative overflow-hidden rounded-3xl border border-violet-400/30 bg-gradient-to-br from-violet-600/20 via-slate-900 to-black p-8 md:p-12 shadow-2xl shadow-violet-950/40">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(168,85,247,0.28),transparent_35%)]" />
+
+          <div className="relative">
+            <div className="inline-flex mb-5 px-4 py-2 rounded-full border border-violet-400/30 bg-violet-500/10 text-violet-200 text-sm">
+              Key deadlines
+            </div>
+
+            <h2 className="text-4xl font-bold mb-10">Important Dates</h2>
+
+            <div className="grid md:grid-cols-4 gap-5">
+              {dates.map(([label, value]) => (
+                <div
+                  key={label}
+                  className="rounded-2xl bg-black/30 border border-white/10 p-6 text-center hover:border-violet-400/50 transition"
+                >
+                  <p className="text-slate-400 text-sm">{label}</p>
+                  <p className="text-2xl font-bold mt-3">{value}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -320,12 +354,15 @@ export default function App() {
             >
               <div className="font-semibold">{name}</div>
               <div className="text-slate-400 mt-1">{affiliation}</div>
-              <a
-                href={`mailto:${email}`}
-                className="text-violet-300 text-sm mt-2 inline-block hover:text-violet-200"
-              >
-                {email}
-              </a>
+
+              {email && (
+                <a
+                  href={`mailto:${email}`}
+                  className="text-violet-300 text-sm mt-2 inline-block hover:text-violet-200"
+                >
+                  {email}
+                </a>
+              )}
             </div>
           ))}
         </div>
@@ -364,35 +401,63 @@ export default function App() {
         </div>
       </section>
 
-      <section id="register" className="max-w-3xl mx-auto px-6 py-20">
+      <section id="identification-form" className="max-w-3xl mx-auto px-6 py-20">
         <div className="rounded-3xl bg-slate-900 border border-white/10 p-8 md:p-12 text-center shadow-2xl">
           <div className="inline-flex mb-5 px-4 py-2 rounded-full border border-violet-400/30 bg-violet-500/10 text-violet-200 text-sm">
-            Registration
+            Workshop internal form
           </div>
 
           <h2 className="text-4xl font-bold mb-6">
-            Register for SAI-CARE 2026
+            Workshop Identification Form
           </h2>
 
           <p className="text-slate-300 text-lg leading-relaxed mb-8">
-            Registration for SAI-CARE 2026 is managed through the official
-            registration form. Participants are invited to provide their contact
-            details, affiliation, attendance mode, and paper submission status.
+            This form is intended for internal workshop organization purposes.
+            It is not the official conference registration form. Participants
+            should use the official conference registration page when it becomes
+            available.
           </p>
 
           <a
-            href={registrationFormUrl}
+            href={workshopIdentificationFormUrl}
             target="_blank"
             rel="noreferrer"
             className="inline-flex px-8 py-4 rounded-xl bg-violet-600 hover:bg-violet-700 transition font-semibold shadow-lg shadow-violet-900/40"
           >
-            Open Registration Form
+            Open Workshop Identification Form
           </a>
 
           <p className="text-slate-500 mt-6 text-sm">
-            Responses will be collected through the official SAI-CARE 2026
-            registration form.
+            The official conference registration is managed by IEEE BIBM 2026.
           </p>
+        </div>
+      </section>
+
+      <section id="conference-registration" className="max-w-3xl mx-auto px-6 py-20">
+        <div className="rounded-3xl bg-white/5 border border-white/10 p-8 md:p-12 text-center">
+          <div className="inline-flex mb-5 px-4 py-2 rounded-full border border-violet-400/30 bg-violet-500/10 text-violet-200 text-sm">
+            Conference registration
+          </div>
+
+          <h2 className="text-4xl font-bold mb-6">
+            Official Registration
+          </h2>
+
+          <p className="text-slate-300 text-lg leading-relaxed mb-8">
+            Official registration for SAI-CARE 2026 participants will be handled
+            through the IEEE BIBM 2026 conference website. Since the dedicated
+            registration section is not yet available, the button currently
+            redirects to the main BIBM 2026 website.
+          </p>
+
+          <a
+            href={conferenceRegistrationUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex px-8 py-4 rounded-xl border border-violet-400/40 text-violet-200 hover:bg-violet-500/10 transition font-semibold"
+          >
+            Go to IEEE BIBM 2026 Website
+          </a>
         </div>
       </section>
 
@@ -404,6 +469,13 @@ export default function App() {
             className="text-violet-300 hover:text-violet-200"
           >
             biomedical.saicare@gmail.com
+          </a>
+          {" · "}
+          <a
+            href="mailto:fdemarco@unisa.it"
+            className="text-violet-300 hover:text-violet-200"
+          >
+            fdemarco@unisa.it
           </a>
         </p>
 
