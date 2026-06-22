@@ -94,8 +94,16 @@ const conferenceRegistrationUrl =
   "https://www3.cs.stonybrook.edu/~bibm2026/";
 
 
-const getPersonImagePath = (name) =>
-  `/img_png_workshop/${encodeURIComponent(name)}.png`;
+const personImageFileNames = {
+  "Daniela D’Auria": "Daniela Dauria.png",
+  "Luigi D’Arco": "Luigi Darco.png",
+};
+
+const getPersonImagePath = (name) => {
+  const fileName = personImageFileNames[name] ?? `${name}.png`;
+
+  return `/img_png_workshop/${encodeURIComponent(fileName)}`;
+};
 
 const getInitials = (name) =>
   name
