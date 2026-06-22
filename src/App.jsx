@@ -23,7 +23,7 @@ const dates = [
 const programChairs = [
   [
     "Fabiola De Marco",
-    "University of Salerno, Italy",
+    "Computer Science Department, University of Salerno, Italy",
     "fdemarco@unisa.it",
   ],
   [
@@ -33,7 +33,7 @@ const programChairs = [
   ],
   [
     "Alessia Auriemma Citarella",
-    "University of Salerno, Italy",
+    "Computer Science Department, University of Salerno, Italy",
     "aauriemmacitarella@unisa.it",
   ],
 ];
@@ -61,7 +61,7 @@ const committee = [
   ],
   [
     "Daniela D’Auria",
-    "Universitas Mercatorum, Italy",
+    "Engineering and Sciences Department, Universitas Mercatorum, Italy",
     "daniela.dauria@unimercatorum.it",
   ],
   [
