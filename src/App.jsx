@@ -22,14 +22,14 @@ const dates = [
 
 const programChairs = [
   [
-    "Huiru Zheng",
-    "School of Computing, Ulster University, UK",
-    "h.zheng@ulster.ac.uk",
-  ],
-  [
     "Fabiola De Marco",
     "University of Salerno, Italy",
     "fdemarco@unisa.it",
+  ],
+  [
+    "Huiru Zheng",
+    "School of Computing, Ulster University, UK",
+    "h.zheng@ulster.ac.uk",
   ],
   [
     "Alessia Auriemma Citarella",
