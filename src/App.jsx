@@ -41,7 +41,7 @@ const programChairs = [
 const committee = [
   [
     "Genoveffa Tortora",
-    "Computer Science Department, University of Salerno, Italy",
+    "Pharmacy Department, University of Salerno, Italy",
     "tortora@unisa.it",
   ],
   [
