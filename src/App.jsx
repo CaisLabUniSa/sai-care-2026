@@ -93,6 +93,46 @@ const workshopIdentificationFormUrl =
 const conferenceRegistrationUrl =
   "https://www3.cs.stonybrook.edu/~bibm2026/";
 
+
+const getPersonImagePath = (name) =>
+  `/img_png_workshop/${encodeURIComponent(name)}.png`;
+
+const getInitials = (name) =>
+  name
+    .split(" ")
+    .map((part) => part[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+
+function PersonPhoto({ name, size = "normal" }) {
+  const sizeClass =
+    size === "large"
+      ? "h-32 w-32 md:h-36 md:w-36"
+      : "h-24 w-24 md:h-28 md:w-28";
+
+  return (
+    <div
+      className={`${sizeClass} relative mx-auto shrink-0 overflow-hidden rounded-2xl border border-violet-400/30 bg-gradient-to-br from-violet-600/20 via-slate-900 to-cyan-500/10 shadow-lg shadow-violet-950/40`}
+    >
+      <img
+        src={getPersonImagePath(name)}
+        alt={`${name} profile`}
+        className="h-full w-full object-cover object-center"
+        loading="lazy"
+        onError={(event) => {
+          event.currentTarget.classList.add("hidden");
+          event.currentTarget.nextElementSibling.classList.remove("hidden");
+        }}
+      />
+
+      <div className="hidden h-full w-full items-center justify-center text-2xl font-bold text-violet-100">
+        {getInitials(name)}
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-slate-950 to-slate-900 text-white">
@@ -440,21 +480,27 @@ export default function App() {
           Program Chairs
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-5 mb-16">
+        <div className="grid md:grid-cols-3 gap-6 mb-16">
           {programChairs.map(([name, affiliation, email]) => (
-            <div
+            <article
               key={name}
-              className="rounded-2xl bg-slate-900 border border-white/10 p-6 text-center"
+              className="rounded-3xl bg-slate-900/90 border border-white/10 p-6 text-center shadow-xl transition hover:-translate-y-1 hover:border-violet-400/40"
             >
-              <h3 className="text-xl font-semibold">{name}</h3>
-              <p className="text-slate-400 mt-2">{affiliation}</p>
+              <PersonPhoto name={name} size="large" />
+
+              <h3 className="text-xl font-semibold mt-5">{name}</h3>
+
+              <p className="text-slate-400 mt-2 min-h-[3rem]">
+                {affiliation}
+              </p>
+
               <a
                 href={`mailto:${email}`}
                 className="text-violet-300 text-sm mt-3 inline-block hover:text-violet-200"
               >
                 {email}
               </a>
-            </div>
+            </article>
           ))}
         </div>
 
@@ -462,39 +508,56 @@ export default function App() {
           Program Committee
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-4 mb-16">
+        <div className="grid md:grid-cols-2 gap-5 mb-16">
           {committee.map(([name, affiliation, email]) => (
-            <div
+            <article
               key={name}
-              className="rounded-xl bg-white/5 border border-white/10 p-5"
+              className="rounded-2xl bg-white/5 border border-white/10 p-5 transition hover:border-violet-400/40"
             >
-              <div className="font-semibold">{name}</div>
-              <div className="text-slate-400 mt-1">{affiliation}</div>
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 text-center sm:text-left">
+                <PersonPhoto name={name} />
 
-              {email && (
-                <a
-                  href={`mailto:${email}`}
-                  className="text-violet-300 text-sm mt-2 inline-block hover:text-violet-200"
-                >
-                  {email}
-                </a>
-              )}
-            </div>
+                <div className="flex-1 pt-1">
+                  <h3 className="text-lg font-semibold">{name}</h3>
+
+                  <p className="text-slate-400 mt-1 leading-relaxed">
+                    {affiliation}
+                  </p>
+
+                  {email && (
+                    <a
+                      href={`mailto:${email}`}
+                      className="text-violet-300 text-sm mt-2 inline-block hover:text-violet-200"
+                    >
+                      {email}
+                    </a>
+                  )}
+                </div>
+              </div>
+            </article>
           ))}
         </div>
 
         <h2 className="text-3xl font-bold text-center mb-8">Web Chair</h2>
 
-        <div className="max-w-xl mx-auto rounded-2xl bg-violet-600/10 border border-violet-400/30 p-6 text-center">
-          <h3 className="text-xl font-semibold">{webChair[0]}</h3>
-          <p className="text-slate-400 mt-2">{webChair[1]}</p>
-          <a
-            href={`mailto:${webChair[2]}`}
-            className="text-violet-300 text-sm mt-3 inline-block hover:text-violet-200"
-          >
-            {webChair[2]}
-          </a>
-        </div>
+        <article className="max-w-2xl mx-auto rounded-3xl bg-violet-600/10 border border-violet-400/30 p-6 md:p-8 shadow-xl">
+          <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+            <PersonPhoto name={webChair[0]} size="large" />
+
+            <div className="flex-1">
+              <h3 className="text-xl font-semibold">{webChair[0]}</h3>
+
+              <p className="text-slate-400 mt-2">{webChair[1]}</p>
+
+              <a
+                href={`mailto:${webChair[2]}`}
+                className="text-violet-300 text-sm mt-3 inline-block hover:text-violet-200"
+              >
+                {webChair[2]}
+              </a>
+            </div>
+          </div>
+        </article>
       </section>
 
       <section id="previous" className="max-w-5xl mx-auto px-6 py-20">
