@@ -70,11 +70,6 @@ const committee = [
     "lrizzo@unisa.it",
   ],
   [
-    "Huiru Zheng",
-    "School of Computing, Ulster University, UK",
-    "h.zheng@ulster.ac.uk",
-  ],
-  [
     "Luigi D’Arco",
     "Electrical Engineering and Information Technology Department, University of Federico II, Italy",
     "luigi.darco@unina.it",
