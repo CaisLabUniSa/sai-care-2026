@@ -211,7 +211,7 @@ export default function App() {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
               href="#cfp"
-              className="px-8 py-4 rounded-xl border border-white/15 hover:bg-white/10 transition font-semibold"
+              className="px-8 py-4 rounded-xl bg-violet-600 hover:bg-violet-700 transition font-semibold shadow-lg shadow-violet-900/40"
             >
               Call for Papers
             </a>
@@ -220,7 +220,7 @@ export default function App() {
               href={conferenceRegistrationUrl}
               target="_blank"
               rel="noreferrer"
-              className="px-8 py-4 rounded-xl bg-violet-600 hover:bg-violet-700 transition font-semibold shadow-lg shadow-violet-900/40"
+              className="px-8 py-4 rounded-xl border border-white/15 hover:bg-white/10 transition font-semibold text-slate-200"
             >
               Registration
             </a>
