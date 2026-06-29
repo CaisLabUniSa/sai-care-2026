@@ -86,7 +86,7 @@ const workshopIdentificationFormUrl =
   "https://forms.gle/ejjhT2U3rdi9xMHU8";
 
 const conferenceRegistrationUrl =
-  "https://www3.cs.stonybrook.edu/~bibm2026/";
+  "https://web.cvent.com/event/73d40c21-f8e3-4333-bc96-765e49bbf02a/summary/";
 
 
 const personImageFileNames = {
