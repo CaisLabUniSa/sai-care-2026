@@ -88,6 +88,9 @@ const workshopIdentificationFormUrl =
 const conferenceRegistrationUrl =
   "https://web.cvent.com/event/73d40c21-f8e3-4333-bc96-765e49bbf02a/summary/";
 
+const bibmWebsiteUrl =
+  "https://www3.cs.stonybrook.edu/~bibm2026/";
+
 
 const personImageFileNames = {
   "Daniela D’Auria": "Daniela Dauria.png",
@@ -318,9 +321,11 @@ export default function App() {
             </div>
 
             <a
-              href={conferenceRegistrationUrl}
+              href={bibmWebsiteUrl}
               target="_blank"
               rel="noreferrer"
+              aria-label="Visit the official IEEE BIBM 2026 website"
+              title="Visit the official IEEE BIBM 2026 website"
               className="block rounded-2xl bg-white p-5 shadow-2xl shadow-black/30 hover:scale-[1.02] transition"
             >
               <img
@@ -626,10 +631,8 @@ export default function App() {
           </h2>
 
           <p className="text-slate-300 text-lg leading-relaxed mb-8">
-            Official registration for SAI-CARE 2026 participants will be handled
-            through the IEEE BIBM 2026 conference website. Since the dedicated
-            registration section is not yet available, the button currently
-            redirects to the main BIBM 2026 website.
+            Official registration for SAI-CARE 2026 participants is managed
+            through the IEEE BIBM 2026 conference registration platform.
           </p>
 
           <a
@@ -638,7 +641,7 @@ export default function App() {
             rel="noreferrer"
             className="inline-flex px-8 py-4 rounded-xl border border-violet-400/40 text-violet-200 hover:bg-violet-500/10 transition font-semibold"
           >
-            Go to IEEE BIBM 2026 Website
+            Open Official Registration
           </a>
         </div>
       </section>
