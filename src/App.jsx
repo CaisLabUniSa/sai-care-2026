@@ -443,7 +443,7 @@ export default function App() {
                 </p>
 
                 <p className="text-4xl md:text-5xl font-extrabold mt-3">
-                  Sep 20, 2026
+                  Oct 10, 2026
                 </p>
 
                 <p className="text-slate-400 mt-5 leading-relaxed">
@@ -455,14 +455,14 @@ export default function App() {
                 <p className="text-slate-400 text-sm">
                   Notification of Acceptance
                 </p>
-                <p className="text-2xl font-bold mt-3">Oct 10, 2026</p>
+                <p className="text-2xl font-bold mt-3">Oct 25, 2026</p>
               </div>
 
               <div className="rounded-3xl bg-black/35 border border-white/10 p-6 hover:border-violet-400/50 transition">
                 <p className="text-slate-400 text-sm">
                   Camera-ready Deadline
                 </p>
-                <p className="text-2xl font-bold mt-3">Oct 25, 2026</p>
+                <p className="text-2xl font-bold mt-3">Nov 5, 2026</p>
               </div>
 
               <div className="lg:col-span-4 rounded-3xl bg-white/5 border border-white/10 p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
