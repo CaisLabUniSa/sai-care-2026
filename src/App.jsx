@@ -14,9 +14,9 @@ const topics = [
 ];
 
 const dates = [
-  ["Submission Deadline", "Sep 20, 2026"],
-  ["Notification of Acceptance", "Oct 10, 2026"],
-  ["Camera-ready Deadline", "Oct 25, 2026"],
+  ["Submission Deadline", "Oct 10, 2026"],
+  ["Notification of Acceptance", "Oct 25, 2026"],
+  ["Camera-ready Deadline", "Nov 5, 2026"],
   ["Workshops", "Dec 1–4, 2026"],
 ];
 
