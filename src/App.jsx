@@ -93,7 +93,7 @@ const bibmWebsiteUrl =
 
 
 const workshopMeetUrl = "https://meet.google.com/kzn-zfey-vrc";
-const workshopProgramPdfUrl = "/SAI-CARE-program.pdf";
+const workshopProgramPdfUrl = "/SAI-CARE program.pdf";
 
 const workshopProgram = [
   ["09:00 – 09:15", "Opening", ""],
