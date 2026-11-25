@@ -17,7 +17,7 @@ const dates = [
   ["Submission Deadline", "Sep 20, 2026"],
   ["Notification of Acceptance", "Oct 10, 2026"],
   ["Camera-ready Deadline", "Oct 25, 2026"],
-  ["Workshops", "Dec 1–4, 2026"],
+  ["Workshops", "Dec 1, 2026"],
 ];
 
 const programChairs = [
