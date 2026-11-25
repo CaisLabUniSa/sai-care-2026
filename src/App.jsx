@@ -256,7 +256,7 @@ export default function App() {
         {[
           ["Conference", "IEEE BIBM 2026"],
           ["Location", "Dallas, Texas"],
-          ["Dates", "Dec 1–4, 2026"],
+          ["Dates", "Dec 1, 2026"],
           ["Style", "Hybrid"],
         ].map(([label, value]) => (
           <div
@@ -494,7 +494,7 @@ export default function App() {
               <div className="lg:col-span-4 rounded-3xl bg-white/5 border border-white/10 p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <div>
                   <p className="text-slate-400 text-sm">Workshop Dates</p>
-                  <p className="text-3xl font-bold mt-2">Dec 1–4, 2026</p>
+                  <p className="text-3xl font-bold mt-2">Dec 1, 2026</p>
                 </div>
 
                 <div className="text-slate-300 md:text-right">
